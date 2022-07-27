@@ -5,6 +5,8 @@ public class Game {
 	public static void main(String[] args) {
 		System.out.println("Welcome to the snake and ladder game...");
 		System.out.println("Starting position: "+Startposition);
-	}
+		int die=(int)(Math.floor(Math.random()*10)%6);
+		System.out.println("You got : "+(die+1));
+		}
 
 }
