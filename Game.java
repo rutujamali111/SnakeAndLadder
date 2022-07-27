@@ -5,7 +5,8 @@ public class Game {
 	private static final int Ladder=1;
 	private static final int snake=2;
 	private static final int Winning_position=100;
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
 		System.out.println("Welcome to the snake and ladder game...");
 		System.out.println("Starting position: "+Startposition);
 		int End_position=0;
@@ -19,6 +20,8 @@ public class Game {
 			{
 				case Ladder:
 					End_position+=die;
+					if(End_position>100)
+						End_position-=die;
 					break;
 				case snake:
 					End_position-=die;
@@ -29,6 +32,6 @@ public class Game {
 					End_position+=0;
 			}
 			System.out.println("Your position is : "+End_position);
-		}	
+		}
 	}
 }
